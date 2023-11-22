@@ -20,8 +20,26 @@ a {
 }
 
 .nav-list li{
-    margin-right: 20px;
+    padding: 0 10px;
     font-size: 20px;
     display: inline-block;
     color: rgb(255, 255, 255);
+}
+
+.nav-list li:last-child a{
+   display: block;    
+   height: 35px;
+   line-height: 35px;
+   padding: 0 10px;
+   background-color: rgb(228, 1, 1);
+   border-radius: 4px;
+   transition: all 500ms ease;
+}
+
+.nav-list li:last-child a:hover{
+   background-color: rgb(207, 2, 2);
+}
+
+.nav-list li:last-child a svg{
+    width: 1em;
 }
