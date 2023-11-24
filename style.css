@@ -4,8 +4,10 @@ body {
 
 ul {
     list-style-type: none;
+    display: flex;
     margin: 0;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -16,30 +18,56 @@ a {
     font-weight: 550;
     background-color: black;
     height: 50px;
-    line-height: 50px;
+    display: flex;
+    align-items: center;
 }
 
-.nav-list li{
-    padding: 0 10px;
+.nav-list {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.nav-list li {
     font-size: 20px;
-    display: inline-block;
     color: rgb(255, 255, 255);
 }
 
-.nav-list li:last-child a{
-   display: block;    
-   height: 35px;
-   line-height: 35px;
-   padding: 0 10px;
-   background-color: rgb(228, 1, 1);
-   border-radius: 4px;
-   transition: all 500ms ease;
+.nav-list li:not(:first-child) {
+    flex-grow: 1;
 }
 
-.nav-list li:last-child a:hover{
-   background-color: rgb(207, 2, 2);
+.nav-list li:first-child {
+    flex-grow: 6;
 }
 
-.nav-list li:last-child a svg{
-    width: 1em;
+.logo-container {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: left;
 }
+
+.nav-list li:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li:last-child a {
+    background-color: rgb(139, 138, 138);
+    border-radius: 4px;
+    transition: all 500ms ease;
+    padding: 0 10px;
+    display: flex;
+    height: 38px;
+    align-items: center;
+} 
+
+.nav-list li:last-child a:hover {
+    filter: brightness(0.80);
+}
+
+.bi {
+    height: 20px;
+    margin-right: 5px; 
+} 
